@@ -10,8 +10,22 @@
 	
 	<h1>Main Page</h1> 
 	
+		<!-- this is connect to controller class with the model 
 	
+		@GetMapping("/")
+	public String index(Model m) {
+		
+		
+		Employe employee = new Employe();
+        m.addAttribute("employee", employee);
+		return "index";
+	}
 	
+	|
+	connected
+	|
+	
+	th:object="${employee}"-->
 		
 	<form action="#" th:action="@{/saveEmployee}" th:object="${employee}" method="POST">
             <input type="text" th:field="*{id}" placeholder="Enter ID" class="form-control mb-4 col-4">
